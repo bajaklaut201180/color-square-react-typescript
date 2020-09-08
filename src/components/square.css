@@ -1,0 +1,32 @@
+.square__wrapper {
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.square__wrapper .square__color{
+  position: relative;
+  cursor: pointer;
+  flex-basis: calc(100% / 5);
+  box-sizing: border-box;
+}
+
+.square__wrapper .square__color.active{
+  border: 1px solid #000;
+}
+
+.square__wrapper .square__color::before{
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+
+.square__wrapper .square__color span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: .5rem;
+}
